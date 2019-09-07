@@ -1,0 +1,11 @@
+1 elsökning i kod med hjälp av gummianka (en: Rubber duck debugging) är en metod för att felsöka kod. 
+1 Namnet är en referens till boken The Pragmatic Programmer, där en programmerare ofta bär runt på en 
+1 gummianka och felsöker sin kod genom att tvinga sig själv att förklara den, rad för rad, 
+1 för ankan.[1] Denna teknik har många andra namn som inbegriper olika livlösa objekt.
+1 Många programmerare har upplevt att när de förklarat sin kod för någon annan, till och med någon 
+1 som inte kan något om programmering, har de själva upptäckt problem i koden. När de beskrivit 
+1 vad koden ska göra, och observerat vad den egentligen gör, uppenbarar sig problemen.[2]
+1 I allmänhet kan det också fungera bra att beskriva ett ämne man själv är välbekant med för någon 
+1 annan för att se på ämnet ur ett annat perspektiv, vilket i sin tur kan skapa en djupare 
+1 förståelse.[3] Genom att använda ett livlöst objekt kan programmeraren uppnå en djupare 
+1 förståelse för eventuella problem i koden utan att behöva störa någon annan.
