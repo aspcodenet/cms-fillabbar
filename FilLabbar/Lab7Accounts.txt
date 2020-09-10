@@ -1,1 +1,3 @@
-kalle persson
+kalle:abc1234
+lisa:qwe123
+stefan:12345

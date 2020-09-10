@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Lab7-2.cs" />
     <Compile Include="Lab7\Account.cs" />
     <Compile Include="Lab7\AccountRepository.cs" />
     <Compile Include="Lab7\Lab.cs" />
@@ -60,6 +61,7 @@
     <Content Include="Lab2TextFile-InData1.txt" />
     <Content Include="Lab2TextFile-InData2.txt" />
     <Content Include="Lab1TextFile-InData.txt" />
+    <Content Include="ViktigInfo.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

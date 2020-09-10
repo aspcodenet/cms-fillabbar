@@ -12,19 +12,27 @@ namespace FilLabbar
         static void Lab1()
         {
             string inFile = "..\\..\\Lab1TextFile-InData.txt";
-            //Sigrun: visa att man kan ha med txt-fil i Projektet!
-            //dessa kompileras ej men ligger med
 
             bool odd = true;
+
             using (StreamReader sr = File.OpenText(inFile))
             {
                 string line;
-                while ((line = sr.ReadLine()) != null)
+                while (true)
                 {
-                    if(odd)
+                    line = sr.ReadLine();
+                    if (line == null) break;
+                    if (odd)
                         Console.WriteLine(line);
                     odd = !odd;
                 }
+
+                //while ((line = sr.ReadLine()) != null)
+                //{
+                //    if(odd)
+                //        Console.WriteLine(line);
+                //    odd = !odd;
+                //}
             }
         }
 
@@ -78,7 +86,7 @@ namespace FilLabbar
                     string line;
                     while ((line = sr.ReadLine()) != null)
                     {
-                        sw.WriteLine(number + " " + line);
+                        sw.WriteLine($"{number} {line}");
                     }
                 }
 
@@ -123,9 +131,9 @@ namespace FilLabbar
                 File.Delete(outFile);
 
 
-            string[] birds = System.IO.File.ReadAllLines(inFile1);
+            string[] birds = File.ReadAllLines(inFile1);
             Array.Sort(birds);
-            System.IO.File.WriteAllLines(outFile,birds);
+            File.WriteAllLines(outFile,birds);
 
         }
 
@@ -136,9 +144,12 @@ namespace FilLabbar
             //Many spaces = more often
             var chars = "         ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
             var sb = new StringBuilder();
-            while(len > 0)
+
+            while (len > 0)
             {
-                sb.Append(chars[rnd.Next(0,chars.Length-1)]);
+                int slumpPosition = rnd.Next(0, chars.Length-1);
+                char ch = chars[slumpPosition];
+                sb.Append(ch);
                 len--;
             }
             return sb.ToString();
@@ -148,7 +159,6 @@ namespace FilLabbar
         {
             if (File.Exists(path))
                 File.Delete(path);
-
             using (StreamWriter sw = File.CreateText(path))
             {
                 while(sizeInBytes > 0)
@@ -197,6 +207,19 @@ namespace FilLabbar
         static void Main(string[] args)
         {
             Lab8();
+            var l = new Lab7_2();
+            l.Run();
+            //var line1 = "abc123";
+            //var line2 = "Abc123";
+            //if (string.Equals(line1, line2, StringComparison.CurrentCultureIgnoreCase))
+            //{
+            //    Console.WriteLine("Samma");
+            //}
+            //if (line1.ToLower() == line2.ToLower() )
+            //{
+            //    Console.WriteLine("Samma");
+            //}
+
             Lab7();
             Lab6();
             Lab5();
